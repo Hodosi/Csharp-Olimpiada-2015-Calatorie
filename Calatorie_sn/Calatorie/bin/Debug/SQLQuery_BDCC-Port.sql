@@ -1,0 +1,1 @@
+﻿DBCC CHECKIDENT (Porturi,RESEED,0)
