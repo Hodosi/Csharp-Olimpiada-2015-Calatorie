@@ -65,8 +65,9 @@
             this.toolStripButton_Turisti.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_Turisti.Image")));
             this.toolStripButton_Turisti.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_Turisti.Name = "toolStripButton_Turisti";
-            this.toolStripButton_Turisti.Size = new System.Drawing.Size(53, 28);
+            this.toolStripButton_Turisti.Size = new System.Drawing.Size(53, 24);
             this.toolStripButton_Turisti.Text = "Turisti";
+            this.toolStripButton_Turisti.Click += new System.EventHandler(this.toolStripButton_Turisti_Click);
             // 
             // toolStripButton_Iesire
             // 
@@ -74,7 +75,7 @@
             this.toolStripButton_Iesire.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_Iesire.Image")));
             this.toolStripButton_Iesire.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_Iesire.Name = "toolStripButton_Iesire";
-            this.toolStripButton_Iesire.Size = new System.Drawing.Size(48, 28);
+            this.toolStripButton_Iesire.Size = new System.Drawing.Size(48, 24);
             this.toolStripButton_Iesire.Text = "Iesire";
             this.toolStripButton_Iesire.Click += new System.EventHandler(this.toolStripButton_Iesire_Click);
             // 

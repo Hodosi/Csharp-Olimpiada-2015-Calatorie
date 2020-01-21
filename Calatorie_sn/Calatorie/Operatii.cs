@@ -31,5 +31,11 @@ namespace Calatorie
         {
 
         }
+
+        private void toolStripButton_Turisti_Click(object sender, EventArgs e)
+        {
+            Turisti tr = new Turisti();
+            tr.ShowDialog();
+        }
     }
 }

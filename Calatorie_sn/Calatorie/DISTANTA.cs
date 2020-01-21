@@ -43,7 +43,7 @@ namespace Calatorie
         public int getDist(int idp, int idp_d)
         {
             SqlCommand command = new SqlCommand();
-            command.CommandText = "SELECT Distanta FROM Distante WHERE ID_Port=@idp and ID_Port_Distanta=@idpd";
+            command.CommandText = "SELECT Distanta FROM Distante WHERE ID_Port=@idp and ID_Port_Destinatie=@idpd";
             command.Connection = conn.GetConnection();
             //@idp,@idpd,@nm,@dist
 
@@ -61,7 +61,7 @@ namespace Calatorie
         public string getNume(int idp, int idp_d)
         {
             SqlCommand command = new SqlCommand();
-            command.CommandText = "SELECT Nume_Port_Destinatie FROM Distante WHERE ID_Port=@idp and ID_Port_Distanta=@idpd";
+            command.CommandText = "SELECT Nume_Port_Destinatie FROM Distante WHERE ID_Port=@idp and ID_Port_Destinatie=@idpd";
             command.Connection = conn.GetConnection();
             //@idp,@idpd,@nm,@dist
 

@@ -17,6 +17,7 @@ namespace Calatorie
         {
             InitializeComponent();
         }
+        CROAZIERA croaz = new CROAZIERA();
         CONNECTION conn = new CONNECTION();
         DISTANTA DISTANTA = new DISTANTA();
         USERS USER = new USERS();
@@ -27,6 +28,7 @@ namespace Calatorie
         private void Administrare_Load(object sender, EventArgs e)
         {
             PORT.deletePorturi();
+            croaz.deleteData();
             this.pictureBox1.Enabled = false;
             string fn = Application.StartupPath + @"\Resurse_C#\MareaNeagra.jpg";
             this.pictureBox1.Image = Image.FromFile(fn);
@@ -34,11 +36,17 @@ namespace Calatorie
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            int x = Cursor.Position.X;
-            int y = Cursor.Position.Y;
-            coordonate.Add(x);
-            coordonate.Add(y);
-
+            if (coordonate.Count < 26)
+            {
+                int x = Cursor.Position.X;
+                int y = Cursor.Position.Y;
+                coordonate.Add(x);
+                coordonate.Add(y);
+            }
+            else
+            {
+                MessageBox.Show("ok");
+            }
             //for(int i=0;i<26;i++)
             //{
             //    MessageBox.Show( coordonate[i].ToString());
@@ -54,6 +62,7 @@ namespace Calatorie
                 PORT.insertPort(numeDestinatii[i], coordonate[coord_index], coordonate[coord_index + 1]);
                 coord_index += 2;
             }
+            MessageBox.Show("ok");
         }
 
         private void button_Init_Cord_Click(object sender, EventArgs e)
@@ -65,6 +74,7 @@ namespace Calatorie
         {
             DISTANTA.deleteData();
             populateDistante();
+            MessageBox.Show("ok");
         }
 
         public void populateDistante()
@@ -87,28 +97,85 @@ namespace Calatorie
 
         private void button_Generare_Click(object sender, EventArgs e)
         {
+            int idcoraz = 1;
             // ------------------ tip = 3; ---------------------------
             string lista_porturi = "";
             string nm = "";
-            for (int i = 2; i <=11; i++)
+            for (int i = 2; i <= 11; i++)
             {
                 lista_porturi = "Constanta,";
-                int dist = DISTANTA.getDist(1,i); ;
+                int dist = DISTANTA.getDist(1, i); ;
                 nm = DISTANTA.getNume(1, i);
-                lista_porturi = lista_porturi+ nm + ",";
+                lista_porturi = lista_porturi + nm + ",";
                 for (int j = i + 1; j <= i + 2; j++)
                 {
                     dist += DISTANTA.getDist(j - 1, j);
                     nm = DISTANTA.getNume(j - 1, j);
                     lista_porturi = lista_porturi + nm + ",";
                 }
-                if(dist >= 800 && dist <= 1100)
+                if (dist >= 800 && dist <= 1100)
                 {
                     lista_porturi += "Constanta";
                     int pret = dist * 2;
+                    croaz.insertCroa(idcoraz, 3, lista_porturi, pret);
+                    idcoraz++;
                     //insert croaziere
                 }
             }
+            MessageBox.Show("ok");
+            // ------------------ tip = 5; ---------------------------
+            for (int i = 2; i <= 9; i++)
+            {
+                lista_porturi = "Constanta,";
+                int dist = DISTANTA.getDist(1, i); ;
+                nm = DISTANTA.getNume(1, i);
+                lista_porturi = lista_porturi + nm + ",";
+                for (int j = i + 1; j <= i + 3; j++)
+                {
+                    dist += DISTANTA.getDist(j - 1, j);
+                    nm = DISTANTA.getNume(j - 1, j);
+                    lista_porturi = lista_porturi + nm + ",";
+                }
+                if (dist >= 800 && dist <= 1600)
+                {
+                    lista_porturi += "Constanta";
+                    int pret = dist * 2;
+                    croaz.insertCroa(idcoraz,5, lista_porturi, pret);
+                    idcoraz++;
+                    //insert croaziere
+                }
+            }
+            MessageBox.Show("ok");
+            // ------------------ tip = 8; ---------------------------
+            for (int i = 2; i <= 6; i++)
+            {
+                lista_porturi = "Constanta,";
+                int dist = DISTANTA.getDist(1, i); ;
+                nm = DISTANTA.getNume(1, i);
+                lista_porturi = lista_porturi + nm + ",";
+                for (int j = i + 1; j <= i + 7; j++)
+                {
+                    dist += DISTANTA.getDist(j - 1, j);
+                    nm = DISTANTA.getNume(j - 1, j);
+                    lista_porturi = lista_porturi + nm + ",";
+                }
+                if (dist >= 800 && dist <= 1900)
+                {
+                    lista_porturi += "Constanta";
+                    int pret = dist * 2;
+                    croaz.insertCroa(idcoraz, 8, lista_porturi, pret);
+                    idcoraz++;
+                    //insert croaziere
+                }
+            }
+            MessageBox.Show("ok");
+        }
+
+        private void button_Lista_Croaziere_Click(object sender, EventArgs e)
+        {
+            ListaCroaziere lista = new ListaCroaziere();
+            lista.ShowDialog();
+            this.Close();
         }
     }
 }

@@ -39,7 +39,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(40, 41);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(800, 600);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -100,6 +100,7 @@
             this.button_Lista_Croaziere.TabIndex = 5;
             this.button_Lista_Croaziere.Text = "Lista Croaziere";
             this.button_Lista_Croaziere.UseVisualStyleBackColor = true;
+            this.button_Lista_Croaziere.Click += new System.EventHandler(this.button_Lista_Croaziere_Click);
             // 
             // Administrare
             // 
