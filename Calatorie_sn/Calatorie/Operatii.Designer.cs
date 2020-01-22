@@ -87,6 +87,7 @@
             this.Controls.Add(this.toolStrip1);
             this.IsMdiContainer = true;
             this.Name = "Operatii";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Operatii";
             this.Load += new System.EventHandler(this.Operatii_Load);
             this.toolStrip1.ResumeLayout(false);

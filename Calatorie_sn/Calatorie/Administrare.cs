@@ -34,25 +34,6 @@ namespace Calatorie
             this.pictureBox1.Image = Image.FromFile(fn);
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            if (coordonate.Count < 26)
-            {
-                int x = Cursor.Position.X;
-                int y = Cursor.Position.Y;
-                coordonate.Add(x);
-                coordonate.Add(y);
-            }
-            else
-            {
-                MessageBox.Show("ok");
-            }
-            //for(int i=0;i<26;i++)
-            //{
-            //    MessageBox.Show( coordonate[i].ToString());
-            //}
-        }
-
         private void button_Save_Cord_Click(object sender, EventArgs e)
         {
             PORT.deletePorturi();
@@ -70,6 +51,22 @@ namespace Calatorie
             this.pictureBox1.Enabled = true;
         }
 
+        private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (coordonate.Count < 26)
+            {
+                int x = e.X;
+                int y = e.Y;
+                //MessageBox.Show(x.ToString() + " " + y.ToString());
+                coordonate.Add(x);
+                coordonate.Add(y);
+            }
+            else
+            {
+                MessageBox.Show("ok");
+            }
+        }
+
         private void button_Actualizare_Cord_Click(object sender, EventArgs e)
         {
             DISTANTA.deleteData();
@@ -79,8 +76,6 @@ namespace Calatorie
 
         public void populateDistante()
         {
-            //string[] numeDestinatii = { "Constanta", "Varna", "Burgas", "Istambul", "Kozlu", "Samsun", "Batumi", "Sokhumi", "Soci", "Anapa", "Yalta", "Sevastopol", "Odessa" };
-
             string path = Application.StartupPath + @"\Resurse_C#\Harta_Distantelor.txt";
             StreamReader sr = new StreamReader(path);
 
@@ -122,7 +117,7 @@ namespace Calatorie
                     //insert croaziere
                 }
             }
-            MessageBox.Show("ok");
+           // MessageBox.Show("ok");
             // ------------------ tip = 5; ---------------------------
             for (int i = 2; i <= 9; i++)
             {
@@ -145,7 +140,7 @@ namespace Calatorie
                     //insert croaziere
                 }
             }
-            MessageBox.Show("ok");
+           // MessageBox.Show("ok");
             // ------------------ tip = 8; ---------------------------
             for (int i = 2; i <= 6; i++)
             {
@@ -165,7 +160,6 @@ namespace Calatorie
                     int pret = dist * 2;
                     croaz.insertCroa(idcoraz, 8, lista_porturi, pret);
                     idcoraz++;
-                    //insert croaziere
                 }
             }
             MessageBox.Show("ok");
@@ -176,6 +170,6 @@ namespace Calatorie
             ListaCroaziere lista = new ListaCroaziere();
             lista.ShowDialog();
             this.Close();
-        }
+        }      
     }
 }

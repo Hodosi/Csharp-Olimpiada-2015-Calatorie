@@ -17,48 +17,29 @@ namespace Calatorie
         {
             InitializeComponent();
             this.Paint += new System.Windows.Forms.PaintEventHandler(MareaNeagra_Paint);
+            //MareaNeagra_Paint(sender: e:); ;
         }
 
         private void MareaNeagra_Load(object sender, EventArgs e)
         {
             string fn = Application.StartupPath + @"\Resurse_C#\MareaNeagra.jpg";
             this.pictureBox1.Image = Image.FromFile(fn);
-            //this.pictureBox1.Hide();
-            //Graphics graphics;
-            //graphics = this.pictureBox1.CreateGraphics();
-            //Pen pen = new Pen(Color.Red);
-            //pen.Width = 30;
-            //graphics.DrawLine(pen, 100, 100, 200, 220);
-
-
         }
 
         private void button_Inchidere_Click(object sender, EventArgs e)
         {
             Autentificare fr = new Autentificare();
             fr.ShowDialog();
-
             this.Close();
         }
 
         private void MareaNeagra_Paint(object sender, PaintEventArgs e)
         {
-            //DateTime dstart = this.dateTimePicker1.Value;
-            //DateTime dstop = this.dateTimePicker2.Value;
-            ////MessageBox.Show(dstart.ToString());
-            ////int id = Convert.ToInt32(this.dataGridView1.SelectedRows.ToString());
-            //int rowindex = this.dataGridView1.CurrentCell.RowIndex;
-            ////MessageBox.Show(this.dataGridView1.Rows[rowindex].Cells[0].Value.ToString());
-            //int id = Convert.ToInt32(this.dataGridView1.Rows[rowindex].Cells[0].Value.ToString());
-            //croaz.insertCroaDate(dstart, dstop, id);
-            // int id=Convert.ToInt32(turisti.textBox1.Text);
-            //MessageBox.Show(id.ToString());
-
             Turisti turisti = new Turisti();
             Graphics graphics;
             graphics = this.pictureBox1.CreateGraphics();
             Pen pen = new Pen(Color.Red);
-            pen.Width = 10;
+            pen.Width = 5;
 
             string[] localitati = this.textBox2.Text.Split(',');
             int x1, x2, y1, y2;

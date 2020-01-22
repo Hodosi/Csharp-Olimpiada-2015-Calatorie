@@ -69,6 +69,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.comboBox_tipCroaz);
             this.Name = "ListaCroaziere";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ListaCroaziere";
             this.Load += new System.EventHandler(this.ListaCroaziere_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

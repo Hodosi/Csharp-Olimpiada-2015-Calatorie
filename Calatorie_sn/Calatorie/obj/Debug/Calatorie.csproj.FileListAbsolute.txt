@@ -21,3 +21,16 @@ D:\Desktop\Calator\Csharp-Olimpiada-2015-Calatorie\Calatorie_sn\Calatorie\obj\De
 D:\Desktop\Calator\Csharp-Olimpiada-2015-Calatorie\Calatorie_sn\Calatorie\obj\Debug\Calatorie.ListaCroaziere.resources
 D:\Desktop\Calator\Csharp-Olimpiada-2015-Calatorie\Calatorie_sn\Calatorie\obj\Debug\Calatorie.Turisti.resources
 D:\Desktop\Calator\Csharp-Olimpiada-2015-Calatorie\Calatorie_sn\Calatorie\obj\Debug\Calatorie.MareaNeagra.resources
+D:\Desktop\Calatorie\Csharp-Olimpiada-2015-Calatorie\Calatorie_sn\Calatorie\bin\Debug\Calatorie.exe
+D:\Desktop\Calatorie\Csharp-Olimpiada-2015-Calatorie\Calatorie_sn\Calatorie\bin\Debug\Calatorie.pdb
+D:\Desktop\Calatorie\Csharp-Olimpiada-2015-Calatorie\Calatorie_sn\Calatorie\obj\Debug\Calatorie.csprojAssemblyReference.cache
+D:\Desktop\Calatorie\Csharp-Olimpiada-2015-Calatorie\Calatorie_sn\Calatorie\obj\Debug\Calatorie.Administrare.resources
+D:\Desktop\Calatorie\Csharp-Olimpiada-2015-Calatorie\Calatorie_sn\Calatorie\obj\Debug\Calatorie.Autentificare.resources
+D:\Desktop\Calatorie\Csharp-Olimpiada-2015-Calatorie\Calatorie_sn\Calatorie\obj\Debug\Calatorie.ListaCroaziere.resources
+D:\Desktop\Calatorie\Csharp-Olimpiada-2015-Calatorie\Calatorie_sn\Calatorie\obj\Debug\Calatorie.MareaNeagra.resources
+D:\Desktop\Calatorie\Csharp-Olimpiada-2015-Calatorie\Calatorie_sn\Calatorie\obj\Debug\Calatorie.Operatii.resources
+D:\Desktop\Calatorie\Csharp-Olimpiada-2015-Calatorie\Calatorie_sn\Calatorie\obj\Debug\Calatorie.Properties.Resources.resources
+D:\Desktop\Calatorie\Csharp-Olimpiada-2015-Calatorie\Calatorie_sn\Calatorie\obj\Debug\Calatorie.Turisti.resources
+D:\Desktop\Calatorie\Csharp-Olimpiada-2015-Calatorie\Calatorie_sn\Calatorie\obj\Debug\Calatorie.csproj.GenerateResource.cache
+D:\Desktop\Calatorie\Csharp-Olimpiada-2015-Calatorie\Calatorie_sn\Calatorie\obj\Debug\Calatorie.exe
+D:\Desktop\Calatorie\Csharp-Olimpiada-2015-Calatorie\Calatorie_sn\Calatorie\obj\Debug\Calatorie.pdb

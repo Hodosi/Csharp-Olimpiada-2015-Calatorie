@@ -15,7 +15,7 @@ namespace Calatorie
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Operatii());
+            Application.Run(new Autentificare());
         }
     }
 }

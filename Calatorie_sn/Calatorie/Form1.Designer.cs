@@ -43,7 +43,7 @@
             this.button_log.Name = "button_log";
             this.button_log.Size = new System.Drawing.Size(225, 53);
             this.button_log.TabIndex = 0;
-            this.button_log.Text = "Log In";
+            this.button_log.Text = "Sign In";
             this.button_log.UseVisualStyleBackColor = true;
             this.button_log.Click += new System.EventHandler(this.button_log_Click);
             // 
@@ -105,6 +105,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button_log);
             this.Name = "Autentificare";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Autentificare";
             this.Load += new System.EventHandler(this.Autentificare_Load);
             this.ResumeLayout(false);
